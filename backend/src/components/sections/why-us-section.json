@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_sections_why_us_sections",
+  "info": {
+    "displayName": "why-us-section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.value-card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

@@ -34,6 +34,44 @@ export const GET_POSTS = gql`
   }
 `;
 
+export const GET_HOMEPAGE = gql`
+  query GetHomepage {
+    homepage {
+      documentId
+      hero: Hero {
+        title
+        subtitle
+        ctaLabel
+        ctaHref
+        image {
+          url
+          alternativeText
+        }
+      }
+      whyUs: WhyUs {
+        title
+        subtitle
+        items {
+          title
+          description
+          iconKey
+        }
+      }
+      latestPosts: LatestPosts {
+        title
+        subtitle
+        limit
+      }
+      cta: CtaSection {
+        title
+        text
+        buttonLabel
+        buttonHref
+      }
+    }
+  }
+`;
+
 export const GET_CATEGORIES = gql`
   query GetCategories($sort: [String]) {
     categories(sort: $sort) {

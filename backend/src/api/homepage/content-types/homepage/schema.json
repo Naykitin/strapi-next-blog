@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Hero": {
+      "type": "component",
+      "component": "sections.hero-section",
+      "repeatable": false
+    },
+    "WhyUs": {
+      "type": "component",
+      "component": "sections.why-us-section",
+      "repeatable": false
+    },
+    "LatestPosts": {
+      "type": "component",
+      "component": "sections.latest-posts-section",
+      "repeatable": false
+    },
+    "CtaSection": {
+      "type": "component",
+      "component": "sections.cta-section",
+      "repeatable": false
+    }
+  }
+}
