@@ -27,6 +27,47 @@
       }
     ]
   },
+  "homepage": {
+    "Hero": {
+      "title": "Build Better Web Projects",
+      "subtitle": "Practical guides about React, Next.js, Strapi, GraphQL, and modern full-stack development.",
+      "ctaLabel": "Read the Blog",
+      "ctaHref": "/blog",
+      "image": "the-internet-s-own-boy.jpg"
+    },
+    "WhyUs": {
+      "title": "Why This Blog",
+      "subtitle": "A focused place to learn by building real features, not just reading theory.",
+      "items": [
+        {
+          "title": "Real Projects",
+          "description": "Learn through practical examples that connect frontend, backend, APIs, and deployment.",
+          "iconKey": "layers"
+        },
+        {
+          "title": "Clear Explanations",
+          "description": "Each article breaks concepts into small steps so you can understand how the pieces fit together.",
+          "iconKey": "book-open"
+        },
+        {
+          "title": "Modern Stack",
+          "description": "Explore tools used in real projects, including Next.js, Strapi, GraphQL, Apollo Client, and Git.",
+          "iconKey": "code"
+        }
+      ]
+    },
+    "LatestPosts": {
+      "title": "Latest Articles",
+      "subtitle": "Fresh notes, tutorials, and experiments from the development workflow.",
+      "limit": 3
+    },
+    "CtaSection": {
+      "title": "Start Learning by Building",
+      "text": "Pick an article, follow the steps, and turn the idea into working code.",
+      "buttonLabel": "Browse Articles",
+      "buttonHref": "/blog"
+    }
+  },
   "categories": [
     {
       "name": "news",
