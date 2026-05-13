@@ -36,6 +36,19 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "publishedAt": {
+      "type": "datetime"
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::category.category"
+    },
+    "author": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::author.author"
     }
   }
 }
