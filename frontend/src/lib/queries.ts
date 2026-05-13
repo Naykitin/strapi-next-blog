@@ -34,6 +34,16 @@ export const GET_POSTS = gql`
   }
 `;
 
+export const GET_CATEGORIES = gql`
+  query GetCategories($sort: [String]) {
+    categories(sort: $sort) {
+      documentId
+      name
+      slug
+    }
+  }
+`;
+
 export const GET_POST_BY_SLUG = gql`
   query GetPostBySlug($slug: String!) {
     posts(filters: { slug: { eq: $slug } }) {

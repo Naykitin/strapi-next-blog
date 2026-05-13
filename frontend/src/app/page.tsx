@@ -1,4 +1,5 @@
 import { BlogPostsList } from "@/components/BlogPostsList";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,6 +13,12 @@ export default function Home() {
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
             Discover our latest articles and insights
           </p>
+          <Link
+            href="/blog"
+            className="mt-6 inline-flex rounded-md border border-gray-300 px-4 py-2 text-sm font-medium text-gray-800 transition hover:bg-gray-100 dark:border-gray-700 dark:text-gray-200 dark:hover:bg-gray-900"
+          >
+            View all posts
+          </Link>
         </div>
       </header>
 
