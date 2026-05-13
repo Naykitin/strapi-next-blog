@@ -3,7 +3,7 @@
 const fs = require('fs-extra');
 const path = require('path');
 const mime = require('mime-types');
-const { categories, authors, articles, global, about } = require('../data/data.json');
+const { categories, authors, articles, global, about, homepage } = require('../data/data.json');
 
 async function seedExampleApp() {
   const shouldImportSeedData = await isFirstRun();
@@ -216,6 +216,25 @@ async function importAbout() {
   });
 }
 
+async function importHomepage() {
+  const image = homepage.Hero?.image
+    ? await checkFileExistsBeforeUpload([homepage.Hero.image])
+    : null;
+
+  await createEntry({
+    model: 'homepage',
+    entry: {
+      ...homepage,
+      Hero: {
+        ...homepage.Hero,
+        image,
+      },
+      // Make sure it's not a draft
+      publishedAt: Date.now(),
+    },
+  });
+}
+
 async function importCategories() {
   for (const category of categories) {
     await createEntry({ model: 'category', entry: category });
@@ -254,6 +273,7 @@ async function importSeedData() {
   await importArticles();
   await importGlobal();
   await importAbout();
+  await importHomepage();
 }
 
 async function main() {
