@@ -1,5 +1,26 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface NavigationNav extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_navs';
+  info: {
+    displayName: 'nav';
+  };
+  attributes: {
+    navLink: Schema.Attribute.Component<'navigation.nav-links', true>;
+  };
+}
+
+export interface NavigationNavLinks extends Struct.ComponentSchema {
+  collectionName: 'components_navigation_nav_links';
+  info: {
+    displayName: 'navLinks';
+  };
+  attributes: {
+    href: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsCtaSection extends Struct.ComponentSchema {
   collectionName: 'components_sections_cta_sections';
   info: {
@@ -128,6 +149,8 @@ export interface SharedValueCard extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'navigation.nav': NavigationNav;
+      'navigation.nav-links': NavigationNavLinks;
       'sections.cta-section': SectionsCtaSection;
       'sections.hero-section': SectionsHeroSection;
       'sections.latest-posts-section': SectionsLatestPostsSection;

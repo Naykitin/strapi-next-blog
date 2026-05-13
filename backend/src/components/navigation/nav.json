@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_navigation_navs",
+  "info": {
+    "displayName": "nav"
+  },
+  "options": {},
+  "attributes": {
+    "navLink": {
+      "type": "component",
+      "component": "navigation.nav-links",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}
