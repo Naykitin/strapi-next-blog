@@ -72,6 +72,26 @@ export const GET_HOMEPAGE = gql`
   }
 `;
 
+export const GET_GLOBAL_HEADER = gql`
+  query GetGlobalHeader {
+    global {
+      siteName
+      headerCtaText
+      headerCtaLink
+      siteLogo {
+        url
+        alternativeText
+      }
+      nav {
+        navLink {
+          label
+          href
+        }
+      }
+    }
+  }
+`;
+
 export const GET_CATEGORIES = gql`
   query GetCategories($sort: [String]) {
     categories(sort: $sort) {
